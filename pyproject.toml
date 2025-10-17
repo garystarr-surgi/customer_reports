@@ -1,0 +1,49 @@
+[build-system]
+requires = ["setuptools>=42", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "customer_reports"
+version = "1.0.0"
+description = "Custom reports and UI enhancements for customer purchase history"
+authors = [
+  { name = "Gary Starr", email = "you@example.com" }
+]
+license = { text = "MIT" }
+dependencies = [
+  "frappe>=14.0.0"
+]
+readme = "README.md"
+requires-python = ">=3.10"
+
+[tool.setuptools]
+packages = ["customer_reports"]
+
+[tool.black]
+line-length = 88
+target-version = ["py310"]
+include = '\.pyi?$'
+exclude = '''
+/(
+    \.git
+  | \.venv
+  | build
+  | dist
+  | node_modules
+  | __pycache__
+)/
+'''
+
+[tool.ruff]
+line-length = 88
+target-version = "py310"
+select = ["E", "F", "B", "I"]
+ignore = ["E501"]
+exclude = ["migrations", "node_modules", "build", "dist"]
+
+[tool.pytest.ini_options]
+minversion = "7.0"
+addopts = "-ra -q"
+testpaths = [
+  "tests"
+]
