@@ -1,7 +1,8 @@
 {
   "report_name": "Customer Item Purchase History",
-  "doctype": "Sales Invoice",
+  "doctype": "Customer",
   "is_standard": "No",
-  "report_type": "Query Report",
-  "module": "Customer Reports"
+  "report_type": "Script Report",
+  "module": "Customer Reports",
+  "script": "customer_reports.report.customer_item_purchase_history.customer_item_purchase_history"
 }
