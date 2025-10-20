@@ -16,11 +16,8 @@ dependencies = [
 readme = "README.md"
 requires-python = ">=3.10"
 
-[tool.setuptools.packages.find]
-where = ["."]
-
-# [tool.setuptools]
-# packages = ["customer_reports"]
+[tool.setuptools]
+packages = ["customer_reports"]
 
 [tool.black]
 line-length = 88
