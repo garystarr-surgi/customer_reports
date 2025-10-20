@@ -1,1 +1,1 @@
-
+from customer_reports._version import __version__
