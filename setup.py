@@ -1,4 +1,4 @@
-from setuptools import setup, find_packages
+from setuptools import setup
 
 setup(
     name='customer_reports',
@@ -6,7 +6,8 @@ setup(
     description='Custom reports and UI enhancements for customer purchase history',
     author='SurgiShop',
     author_email='gary.starr@surgishop.com',
-    packages=find_packages(),
+    packages=["customer_reports"],
+    package_dir={"customer_reports": "."},
     zip_safe=False,
     include_package_data=True,
     install_requires=[
