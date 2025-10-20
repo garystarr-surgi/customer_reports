@@ -1,1 +1,1 @@
-from customer_reports.customer_reports import __version__
+__version__="1.0.0"
