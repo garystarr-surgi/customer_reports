@@ -1,4 +1,4 @@
-__version__ = "1.0.0"
+from . import __version__ as app_version
 
 app_name = "customer_reports"
 app_title = "Customer Reports"
