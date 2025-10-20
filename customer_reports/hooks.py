@@ -1,4 +1,7 @@
-from . import __version__ as app_version
+try:
+    from . import __version__ as app_version
+except Exception:
+    app_version = "0.0.1"
 
 app_name = "customer_reports"
 app_title = "Customer Reports"
