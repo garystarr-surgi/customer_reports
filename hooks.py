@@ -15,7 +15,7 @@ fixtures = [
 ]
 
 # Desktop module registration
-app_include_js = "/assets/customer_reports/js/customer_item_purchase_history.js"
+# app_include_js = "/assets/customer_reports/js/customer_item_purchase_history.js"
 
 # Optional: register your module in the desktop
 app_icon = "octicon octicon-graph"
