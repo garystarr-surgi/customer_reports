@@ -1,4 +1,8 @@
-from . import __version__ as app_version
+try:
+    from importlib.metadata import version
+    app_version = version("customer_reports")
+except Exception:
+    app_version = "0.0.0"
 
 app_name = "customer_reports"
 app_title = "Customer Reports"
