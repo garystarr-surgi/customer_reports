@@ -18,7 +18,7 @@ setup(
             "*.txt",
             "custom/**/*",
             "report/**/*",
-            "client_script/**/*",
+            "public/**/*",
         ]
     },
     zip_safe=False,
