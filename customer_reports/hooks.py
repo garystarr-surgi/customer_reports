@@ -1,13 +1,8 @@
-try:
-    from importlib.metadata import version
-    app_version = version("customer_reports")
-except Exception:
-    app_version = "0.0.0"
-
 app_name = "customer_reports"
 app_title = "Customer Reports"
 app_publisher = "SurgiShop"
 app_description = "Custom reports and UI enhancements for customer purchase history"
+app_version = "1.0.0"
 app_email = "gary.starr@surgishop.com"
 app_license = "MIT"
 
