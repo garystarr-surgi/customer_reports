@@ -1,0 +1,12 @@
+{
+  "name": "customer_reports",
+  "version": "1.0.0",
+  "description": "Custom reports and UI enhancements for customer purchase history",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": ["frappe", "reports"],
+  "author": "SurgiShop",
+  "license": "MIT"
+}

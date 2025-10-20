@@ -18,7 +18,6 @@ setup(
             "*.txt",
             "custom/**/*",
             "report/**/*",
-            "public/**/*",
         ]
     },
     zip_safe=False,
