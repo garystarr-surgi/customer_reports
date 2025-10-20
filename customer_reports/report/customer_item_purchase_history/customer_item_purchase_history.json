@@ -1,8 +1,23 @@
 {
-  "report_name": "Customer Item Purchase History",
-  "doctype": "Customer",
-  "is_standard": "No",
-  "report_type": "Script Report",
-  "module": "Customer Reports",
-  "script": "customer_reports.report.customer_item_purchase_history.customer_item_purchase_history"
+  "doctype": "Report",
+  "name": "Customer Item Purchase History",
+  "ref_doctype": "Customer",
+  "report_type": "Report Builder",
+  "is_standard": "Yes",
+  "disabled": 0,
+  "add_total_row": 0,
+  "apply_user_permissions": 1,
+  "roles": [
+    {
+      "role": "Sales User"
+    },
+    {
+      "role": "System Manager"
+    }
+  ],
+  "columns": [],
+  "filters": [],
+  "prepared_report": 0,
+  "query": "",
+  "module": "Customer Reports"
 }
