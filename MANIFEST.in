@@ -1,0 +1,8 @@
+include README.md
+include requirements.txt
+include LICENSE
+recursive-include customer_reports *.py
+recursive-include customer_reports *.js
+recursive-include customer_reports *.json
+recursive-include customer_reports *.css
+recursive-include customer_reports *.html

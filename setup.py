@@ -8,6 +8,19 @@ setup(
     author_email='gary.starr@surgishop.com',
     packages=["customer_reports"],
     package_dir={"customer_reports": "."},
+    package_data={
+        "customer_reports": [
+            "*.json",
+            "*.js",
+            "*.css",
+            "*.html",
+            "*.md",
+            "*.txt",
+            "custom/**/*",
+            "report/**/*",
+            "client_script/**/*",
+        ]
+    },
     zip_safe=False,
     include_package_data=True,
     install_requires=[
