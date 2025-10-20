@@ -20,9 +20,9 @@ fixtures = [
 # ]
 
 # Optional: register your module in the desktop
-app_icon = "octicon octicon-graph"
-app_color = "#589494"
-app_module = "Customer Reports"
+# app_icon = "octicon octicon-graph"
+# app_color = "#589494"
+# app_module = "Customer Reports"
 
 # Optional: if you use patches
 # patches = [
