@@ -2,10 +2,10 @@
   "doctype": "Report",
   "name": "Customer Item Purchase History",
   "ref_doctype": "Customer",
-  "report_type": "Report Builder",
+  "report_type": "Query Report",
   "is_standard": "Yes",
   "disabled": 0,
-  "add_total_row": 0,
+  "add_total_row": 1,
   "apply_user_permissions": 1,
   "roles": [
     {
@@ -18,6 +18,6 @@
   "columns": [],
   "filters": [],
   "prepared_report": 0,
-  "query": "",
+  "query": "SELECT \n  si.posting_date,\n  si.name as invoice,\n  sii.item_code,\n  sii.item_name,\n  sii.qty,\n  sii.rate,\n  sii.amount\nFROM `tabSales Invoice` si\nINNER JOIN `tabSales Invoice Item` sii ON si.name = sii.parent\nWHERE si.customer = %(customer)s\n  AND si.docstatus = 1\n  AND (%(item_code)s = '' OR sii.item_code = %(item_code)s)\nORDER BY si.posting_date DESC",
   "module": "Customer Reports"
 }
