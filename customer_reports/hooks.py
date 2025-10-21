@@ -15,13 +15,6 @@ fixtures = [
         ]
     },
     {
-        "dt": "Custom Field",
-        "filters": [
-            ["dt", "=", "Customer"],
-            ["fieldname", "like", "customer_reports%"]
-        ]
-    },
-    {
         "dt": "Client Script",
         "filters": [
             ["dt", "=", "Customer"],
