@@ -42,10 +42,10 @@ fixtures = [
 app_icon = "octicon octicon-graph"
 app_color = "#589494"
 
-# Doctype JS - include report JS for Customer doctype
-doctype_js = {
-    "Customer": "public/js/customer_item_purchase_history.js"
-}
+# Doctype JS (optional - if you want to override Customer form)
+# doctype_js = {
+#     "Customer": "public/js/customer.js"
+# }
 
 # Boot session info (optional)
 # boot_session = "customer_reports.boot.boot_session"
