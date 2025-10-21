@@ -31,7 +31,9 @@ fixtures = [
 ]
 
 # Include JS files
-# app_include_js = "/assets/customer_reports/js/customer_reports.bundle.js"
+app_include_js = [
+    "/assets/customer_reports/js/customer_item_purchase_history.js"
+]
 
 # Include CSS files
 # app_include_css = "/assets/customer_reports/css/customer_reports.css"
@@ -39,12 +41,6 @@ fixtures = [
 # Optional: register your module in the desktop
 app_icon = "octicon octicon-graph"
 app_color = "#589494"
-
-# Module registration
-# This makes your app appear in the modules list
-app_include_js = [
-   "/assets/customer_reports/js/customer_reports.min.js"
-]
 
 # Doctype JS (optional - if you want to override Customer form)
 # doctype_js = {
