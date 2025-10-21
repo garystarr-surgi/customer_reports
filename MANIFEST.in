@@ -1,8 +1,18 @@
-include README.md
+include MANIFEST.in
 include requirements.txt
-include LICENSE
-recursive-include customer_reports *.py
+include *.json
+include *.md
+include *.py
+include *.txt
+recursive-include customer_reports *.css
+recursive-include customer_reports *.csv
+recursive-include customer_reports *.html
+recursive-include customer_reports *.ico
 recursive-include customer_reports *.js
 recursive-include customer_reports *.json
-recursive-include customer_reports *.css
-recursive-include customer_reports *.html
+recursive-include customer_reports *.md
+recursive-include customer_reports *.png
+recursive-include customer_reports *.py
+recursive-include customer_reports *.svg
+recursive-include customer_reports *.txt
+recursive-exclude customer_reports *.pyc
