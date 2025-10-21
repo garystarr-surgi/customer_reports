@@ -2,7 +2,7 @@
   "doctype": "Report",
   "name": "Customer Item Purchase History",
   "ref_doctype": "Customer",
-  "report_type": "Query Report",
+  "report_type": "Report Builder",
   "is_standard": "Yes",
   "disabled": 0,
   "add_total_row": 1,
