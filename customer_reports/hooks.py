@@ -42,7 +42,7 @@ app_color = "#589494"
 
 # Module registration
 # This makes your app appear in the modules list
-app_include_js = [
+# app_include_js = [
     "/assets/customer_reports/js/customer_reports.min.js"
 ]
 
