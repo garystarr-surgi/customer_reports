@@ -43,8 +43,8 @@ app_color = "#589494"
 # Module registration
 # This makes your app appear in the modules list
 # app_include_js = [
-    "/assets/customer_reports/js/customer_reports.min.js"
-]
+#    "/assets/customer_reports/js/customer_reports.min.js"
+# ]
 
 # Doctype JS (optional - if you want to override Customer form)
 # doctype_js = {
