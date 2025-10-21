@@ -31,9 +31,9 @@ fixtures = [
 ]
 
 # Include JS files
-app_include_js = [
-    "/assets/customer_reports/js/customer_item_purchase_history.js"
-]
+# app_include_js = [
+#     "/assets/customer_reports/js/customer_item_purchase_history.js"
+# ]
 
 # Include CSS files
 # app_include_css = "/assets/customer_reports/css/customer_reports.css"
@@ -42,10 +42,10 @@ app_include_js = [
 app_icon = "octicon octicon-graph"
 app_color = "#589494"
 
-# Doctype JS (optional - if you want to override Customer form)
-# doctype_js = {
-#     "Customer": "public/js/customer.js"
-# }
+# Doctype JS - include report JS for Customer doctype
+doctype_js = {
+    "Customer": "public/js/customer_item_purchase_history.js"
+}
 
 # Boot session info (optional)
 # boot_session = "customer_reports.boot.boot_session"
