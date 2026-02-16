@@ -51,19 +51,26 @@ def execute(filters=None):
     return columns, get_data(filters)
 
 def get_data(filters):
-    conditions = "si.docstatus = 1"
+    conditions = ["si.docstatus = 1"]
+    values = {}
     
     if filters.get("customer"):
-        conditions += f" AND si.customer = '{filters.get('customer')}'"
+        conditions.append("si.customer = %(customer)s")
+        values["customer"] = filters.get("customer")
     
     if filters.get("item_code"):
-        conditions += f" AND sii.item_code = '{filters.get('item_code')}'"
+        conditions.append("sii.item_code = %(item_code)s")
+        values["item_code"] = filters.get("item_code")
     
     if filters.get("from_date"):
-        conditions += f" AND si.posting_date >= '{filters.get('from_date')}'"
+        conditions.append("si.posting_date >= %(from_date)s")
+        values["from_date"] = filters.get("from_date")
     
     if filters.get("to_date"):
-        conditions += f" AND si.posting_date <= '{filters.get('to_date')}'"
+        conditions.append("si.posting_date <= %(to_date)s")
+        values["to_date"] = filters.get("to_date")
+    
+    conditions_str = " AND ".join(conditions)
     
     data = frappe.db.sql(f"""
         SELECT 
@@ -76,8 +83,8 @@ def get_data(filters):
             sii.amount
         FROM `tabSales Invoice` si
         INNER JOIN `tabSales Invoice Item` sii ON si.name = sii.parent
-        WHERE {conditions}
+        WHERE {conditions_str}
         ORDER BY si.posting_date DESC
-    """, as_dict=1)
+    """, values, as_dict=1)
     
     return data
