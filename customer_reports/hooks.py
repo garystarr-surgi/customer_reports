@@ -1,56 +1,34 @@
-app_version = "0.0.1"
 app_name = "customer_reports"
 app_title = "Customer Reports"
 app_publisher = "SurgiShop"
-app_description = "Custom reports and UI enhancements for customer purchase history"
+app_description = "Customer Purchase History Report"
 app_email = "gary.starr@surgishop.com"
 app_license = "MIT"
 
-# Includes in fixtures
-fixtures = [
-    {
-        "dt": "Report",
-        "filters": [
-            ["name", "in", ["Customer Item Purchase History"]]
-        ]
-    },
-    {
-        "dt": "Client Script",
-        "filters": [
-            ["dt", "=", "Customer"],
-            ["name", "like", "%customer_reports%"]
-        ]
-    }
-]
+# Includes in <head>
+# ------------------
 
-# Include JS files
-# app_include_js = [
-#     "/assets/customer_reports/js/customer_item_purchase_history.js"
-# ]
-
-# Include CSS files
+# include js, css files in header of desk.html
 # app_include_css = "/assets/customer_reports/css/customer_reports.css"
+app_include_js = "/assets/customer_reports/js/customer.js"
 
-# Optional: register your module in the desktop
-app_icon = "octicon octicon-graph"
-app_color = "#589494"
+# include js, css files in header of web template
+# web_include_css = "/assets/customer_reports/css/customer_reports.css"
+# web_include_js = "/assets/customer_reports/js/customer_reports.js"
 
-# Doctype JS (optional - if you want to override Customer form)
-# doctype_js = {
-#     "Customer": "public/js/customer.js"
-# }
+# include custom scss in every website theme (without file extension ".scss")
+# website_theme_scss = "customer_reports/public/scss/website"
 
-# Boot session info (optional)
-# boot_session = "customer_reports.boot.boot_session"
+# include js, css files in header of web form
+# webform_include_js = {"doctype": "public/js/doctype.js"}
+# webform_include_css = {"doctype": "public/css/doctype.css"}
 
-# Scheduled Tasks (optional)
-# scheduler_events = {
-#     "daily": [
-#         "customer_reports.tasks.daily"
-#     ]
-# }
+# include js in page
+# page_js = {"page" : "public/js/file.js"}
 
-# Optional: if you use patches
-# patches = [
-#     "customer_reports.patches.v0_0.setup_customer_reports"
-# ]
+# include js in doctype views
+doctype_js = {"Customer" : "public/js/customer.js"}
+# doctype_list_js = {"doctype" : "public/js/doctype_list.js"}
+# doctype_tree_js = {"doctype" : "public/js/doctype_tree.js"}
+# doctype_calendar_js = {"doctype" : "public/js/doctype_calendar.js"}
+
