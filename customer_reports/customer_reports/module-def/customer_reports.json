@@ -1,0 +1,10 @@
+{
+ "app_name": "customer_reports",
+ "category": "Modules",
+ "creation": "2025-02-16 12:00:00",
+ "docstatus": 0,
+ "doctype": "Module Def",
+ "module_name": "Customer Reports",
+ "name": "Customer Reports",
+ "restrict_to_domain": ""
+}
