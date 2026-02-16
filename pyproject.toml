@@ -10,14 +10,9 @@ authors = [
   { name = "SurgiShop", email = "gary.starr@surgishop.com" }
 ]
 license = { text = "MIT" }
-dependencies = [
-  "frappe>=15.0.0"
-]
+dependencies = []
 readme = "README.md"
 requires-python = ">=3.10"
-
-[tool.bench.frappe-dependencies]
-frappe = ">=15.0.0"
 
 [tool.setuptools]
 packages = ["customer_reports"]
@@ -50,6 +45,7 @@ addopts = "-ra -q"
 testpaths = [
   "tests"
 ]
+
 
 dependencies = [
     "frappe>=15",
