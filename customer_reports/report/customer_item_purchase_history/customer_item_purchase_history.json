@@ -1,8 +1,8 @@
 {
   "doctype": "Report",
   "name": "Customer Item Purchase History",
-  "ref_doctype": "Customer",
-  "report_type": "Report Builder",
+  "ref_doctype": "Sales Invoice",
+  "report_type": "Script Report",
   "is_standard": "Yes",
   "disabled": 0,
   "add_total_row": 1,
@@ -18,33 +18,5 @@
       "role": "Administrator"
     }
   ],
-  "columns": [],
-  "filters": [
-    {
-      "fieldname": "customer",
-      "label": "Customer",
-      "fieldtype": "Link",
-      "options": "Customer",
-      "reqd": 1
-    },
-    {
-      "fieldname": "item_code",
-      "label": "Item Code",
-      "fieldtype": "Link",
-      "options": "Item"
-    },
-    {
-      "fieldname": "from_date",
-      "label": "From Date",
-      "fieldtype": "Date"
-    },
-    {
-      "fieldname": "to_date",
-      "label": "To Date",
-      "fieldtype": "Date"
-    }
-  ],
-  "prepared_report": 0,
-  "query": "SELECT \n  si.posting_date,\n  si.name as invoice,\n  sii.item_code,\n  sii.item_name,\n  sii.qty,\n  sii.rate,\n  sii.amount\nFROM `tabSales Invoice` si\nINNER JOIN `tabSales Invoice Item` sii ON si.name = sii.parent\nWHERE si.customer = %(customer)s\n  AND si.docstatus = 1\n  AND (%(item_code)s = '' OR sii.item_code = %(item_code)s)\n  AND (%(from_date)s = '' OR si.posting_date >= %(from_date)s)\n  AND (%(to_date)s = '' OR si.posting_date <= %(to_date)s)\nORDER BY si.posting_date DESC",
   "module": "Customer Reports"
 }
