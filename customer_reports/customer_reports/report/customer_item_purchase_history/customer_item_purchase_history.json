@@ -1,0 +1,18 @@
+{
+ "docstatus": 0,
+ "doctype": "Report",
+ "is_standard": "Yes",
+ "module": "Customer Reports",
+ "name": "Customer Item Purchase History",
+ "ref_doctype": "Sales Invoice",
+ "report_name": "Customer Item Purchase History",
+ "report_type": "Script Report",
+ "roles": [
+  {
+   "role": "Sales User"
+  },
+  {
+   "role": "System Manager"
+  }
+ ]
+}
